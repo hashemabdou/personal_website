@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(28, 16, 48, 0.95); /* More opaque dark purple background */
+    color: #00ff80c9; /* Neon green text color */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrollbars caused by floating emojis */
+}
+
+.terminal-window {
+    background-color: #000000; /* Black terminal background */
+    border-radius: 10px;
+    padding: 30px;
+    width: 700px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid #00ff7f;
+    line-height: 1.6;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.red {
+    background-color: #ff5f56;
+}
+
+.yellow {
+    background-color: #ffbd2e;
+}
+
+.green {
+    background-color: #27c93f;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #00ff80e0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #00ff80fe;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+p {
+    margin: 10px 0;
+    color: #00ff80da;
+    font-weight: normal;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+a {
+    color: #5ac8fa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.currently, .experience, .education, .other {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.icon {
+    color: #00ff7f;
+}
+
+/* Floating emojis */
+.floating-emoji {
+    position: absolute;
+    font-size: 24px;
+    z-index: 10;
+}
