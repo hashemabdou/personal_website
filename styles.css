@@ -6,72 +6,36 @@
 
 body {
     background-color: rgba(28, 16, 48, 0.95); /* More opaque dark purple background */
-    color: #00ff80c9; /* Neon green text color */
+    color: #00ff7f; /* Neon green text color */
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden; /* Prevent scrollbars caused by floating emojis */
+    align-items: flex-start; /* Changed to flex-start for scrollable content */
+    min-height: 100vh; /* Changed from 100vh to allow content to scroll */
+    padding: 20px; /* Add padding for better spacing */
 }
 
 .terminal-window {
-    background-color: #000000; /* Black terminal background */
+    background-color: #000000;
     border-radius: 10px;
     padding: 30px;
-    width: 700px;
+    max-width: 700px; /* Set a max-width instead of a fixed width */
+    width: 100%; /* Ensure it fits on smaller screens */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 2px solid #00ff7f;
     line-height: 1.6;
 }
 
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-}
-
-.dots {
-    display: flex;
-    align-items: center;
-}
-
-.dot {
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    margin-right: 5px;
-}
-
-.red {
-    background-color: #ff5f56;
-}
-
-.yellow {
-    background-color: #ffbd2e;
-}
-
-.green {
-    background-color: #27c93f;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #00ff80e0;
-    margin-bottom: 20px;
-}
-
 h1 {
-    color: #00ff80fe;
+    color: #00ff7f;
     font-size: 32px;
     font-weight: bold;
 }
 
 p {
     margin: 10px 0;
-    color: #00ff80da;
+    color: #00ff7f;
     font-weight: normal;
 }
 
@@ -94,18 +58,54 @@ a:hover {
     text-decoration: underline;
 }
 
-.currently, .experience, .education, .other {
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-.icon {
-    color: #00ff7f;
-}
-
 /* Floating emojis */
 .floating-emoji {
     position: absolute;
     font-size: 24px;
-    z-index: 10;
+    animation: float 5s ease-in-out infinite;
+}
+
+.unicorn {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.rocket {
+    top: 40%;
+    left: 70%;
+    animation-delay: 2s;
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start; /* Ensure content starts from the top on smaller screens */
+        padding: 10px;
+    }
+
+    .terminal-window {
+        padding: 20px;
+        max-width: 100%; /* Make it fit the width of smaller screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Reduce heading size for smaller screens */
+    }
+
+    .social-media a {
+        font-size: 12px; /* Adjust social media text size */
+    }
+}
+
+/* Keyframes for floating emoji animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-40px) rotate(20deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
 }
