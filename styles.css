@@ -41,7 +41,7 @@ p {
 
 ul {
     list-style-type: disc;
-    margin-left: 20px;
+    margin-left: 20px; /* Return to the original bullet point size */
 }
 
 li {
@@ -56,6 +56,22 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.currently, .experience, .education, .other {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px; /* Slightly larger for bold headers */
+}
+
+.icon {
+    color: #00ff7f; /* Green icons */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #00ff7f; /* Green underline */
+    margin-bottom: 20px;
 }
 
 /* Floating emojis */
@@ -77,6 +93,7 @@ a:hover {
     animation-delay: 2s;
 }
 
+/* Mobile-specific styles */
 @media (max-width: 768px) {
     body {
         align-items: flex-start; /* Ensure content starts from the top on smaller screens */
@@ -89,23 +106,12 @@ a:hover {
     }
 
     h1 {
-        font-size: 24px; /* Reduce heading size for smaller screens */
+        font-size: 50px; /* Larger font size for the title "Hashem Abdou" on mobile */
+        margin-top: 40px; /* Add more space above the title */
     }
 
-    .social-media a {
-        font-size: 12px; /* Adjust social media text size */
-    }
-}
-
-/* Keyframes for floating emoji animation */
-@keyframes float {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-40px) rotate(20deg);
-    }
-    100% {
-        transform: translateY(0) rotate(0deg);
+    hr {
+        border-top: 1px solid #00ff7f; /* Green line on mobile */
+        margin-top: 20px; /* Add more space above the line */
     }
 }
