@@ -8,12 +8,13 @@ body {
     background-color: rgba(28, 16, 48, 0.95); /* More opaque dark purple background */
     color: #00ff7f; /* Neon green text color */
     font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
+    font-size: 13px;
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Changed to flex-start for scrollable content */
     min-height: 100vh; /* Changed from 100vh to allow content to scroll */
     padding: 20px; /* Add padding for better spacing */
+    padding-top: 60px;
 }
 
 .terminal-window {
@@ -61,7 +62,7 @@ a:hover {
 .currently, .experience, .education, .other {
     margin-top: 20px;
     font-weight: bold;
-    font-size: 16px; /* Slightly larger for bold headers */
+    font-size: 13px; /* Slightly larger for bold headers */
 }
 
 .icon {
@@ -114,4 +115,36 @@ hr {
         border-top: 1px solid #00ff7f; /* Green line on mobile */
         margin-top: 20px; /* Add more space above the line */
     }
+}
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.dots {
+    display: flex;
+    align-items: center;
+}
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.red {
+    background-color: #ff5f56;
+}
+.yellow {
+    background-color: #ffbd2e;
+}
+.green {
+    background-color: #27c93f;
+}
+hr {
+    border: none;
+    border-top: 1px solid #00ff80e0;
+    margin-bottom: 20px;
 }
