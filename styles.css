@@ -1,53 +1,62 @@
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgba(28, 16, 48, 0.95); /* More opaque dark purple background */
-    color: #00ff7f; /* Neon green text color */
+.main-body {
+    background-color: offwhite;
     font-family: 'Courier New', Courier, monospace;
     font-size: 13px;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Changed to flex-start for scrollable content */
-    min-height: 100vh; /* Changed from 100vh to allow content to scroll */
-    padding: 20px; /* Add padding for better spacing */
-    padding-top: 60px;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 60px 20px 20px;
 }
 
+/* Terminal window */
 .terminal-window {
     background-color: #000000;
     border-radius: 10px;
     padding: 30px;
-    max-width: 700px; /* Set a max-width instead of a fixed width */
-    width: 100%; /* Ensure it fits on smaller screens */
+    max-width: 700px;
+    width: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 2px solid #00ff7f;
     line-height: 1.6;
+    color: #00ff7f;
 }
 
-h1 {
+/* Headers */
+.header-main h1 {
     color: #00ff7f;
-    font-size: 32px;
     font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-p {
-    margin: 10px 0;
+.section-header {
     color: #00ff7f;
-    font-weight: normal;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 20px;
 }
 
+/* Content sections */
+.content-section {
+    margin-top: 20px;
+}
+
+/* Lists and links */
 ul {
     list-style-type: disc;
-    margin-left: 20px; /* Return to the original bullet point size */
+    margin-left: 20px;
 }
 
 li {
     margin: 5px 0;
-    font-weight: normal;
 }
 
 a {
@@ -59,19 +68,34 @@ a:hover {
     text-decoration: underline;
 }
 
-.currently, .experience, .education, .other {
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 13px; /* Slightly larger for bold headers */
+/* Top bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
 }
 
-.icon {
-    color: #00ff7f; /* Green icons */
+.dots {
+    display: flex;
+    align-items: center;
 }
 
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+/* Dividers */
 hr {
     border: none;
-    border-top: 1px solid #00ff7f; /* Green underline */
+    border-top: 1px solid #00ff7f;
     margin-bottom: 20px;
 }
 
@@ -85,7 +109,6 @@ hr {
 .unicorn {
     top: 20%;
     left: 10%;
-    animation-delay: 0s;
 }
 
 .rocket {
@@ -94,57 +117,19 @@ hr {
     animation-delay: 2s;
 }
 
-/* Mobile-specific styles */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-    body {
-        align-items: flex-start; /* Ensure content starts from the top on smaller screens */
+    .main-body {
         padding: 10px;
     }
 
     .terminal-window {
         padding: 20px;
-        max-width: 100%; /* Make it fit the width of smaller screens */
+        max-width: 100%;
     }
 
-    h1 {
-        font-size: 30px; /* Larger font size for the title "Hashem Abdou" on mobile */
-        margin-top: 40px; /* Add more space above the title */
+    .header-main h1 {
+        font-size: 30px;
+        margin-top: 40px;
     }
-
-    hr {
-        border-top: 1px solid #00ff7f; /* Green line on mobile */
-        margin-top: 20px; /* Add more space above the line */
-    }
-}
-
-
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-}
-.dots {
-    display: flex;
-    align-items: center;
-}
-.dot {
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    margin-right: 5px;
-}
-.red {
-    background-color: #ff5f56;
-}
-.yellow {
-    background-color: #ffbd2e;
-}
-.green {
-    background-color: #27c93f;
-}
-hr {
-    border: none;
-    border-top: 1px solid #00ff80e0;
-    margin-bottom: 20px;
 }
