@@ -9,11 +9,11 @@
     background-color: offwhite;
     font-family: 'Courier New', Courier, monospace;
     font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     min-height: 100vh;
-    padding: 60px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
 /* Terminal window */
@@ -27,6 +27,7 @@
     border: 2px solid #00ff7f;
     line-height: 1.6;
     color: #00ff7f;
+    margin: 0 auto;
 }
 
 /* Headers */
